@@ -39,12 +39,12 @@
 // - Cars:       9
 // - Home:       0
 // - IGate:      5
-#define S_CALLSIGN      "MYCALL"
-#define S_CALLSIGN_ID   11
+//#define S_CALLSIGN      "MYCALL"
+//#define S_CALLSIGN_ID   11
 
 // Destination callsign: APRS (with SSID=0) is usually okay.
-#define D_CALLSIGN      "APRS"
-#define D_CALLSIGN_ID   0
+//#define D_CALLSIGN      "APRS"
+//#define D_CALLSIGN_ID   0
 
 // Digipeating paths:
 // (read more about digipeating paths here: http://wa8lmf.net/DigiPaths/ )
