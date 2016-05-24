@@ -43,21 +43,21 @@ void aprs_send()
   
   char* S_callsign = NULL;
   S_callsign= new char[7];
-  char* S_callsign_id;
+  char* S_callsign_id = NULL;
   char* D_callsign = NULL;
   D_callsign= new char[7];
  
   
-  char* D_callsign_id;
+  char* D_callsign_id = NULL;
 
-  strncpy(S_callsign, "AK6L", 4);
-  S_callsign_id = '4';
+  strncpy(S_callsign, "MYCALL", 4);
+  //S_callsign_id = '4';
   strncpy(D_callsign, "APRS", 4);
-  S_callsign_id = '0';
+  //S_callsign_id = '0';
   
   const struct s_address addresses[] = { 
-    {D_callsign, D_callsign_id},  // Destination callsign
-    {S_callsign, S_callsign_id},  // Source callsign (-11 = balloon, -9 = car)
+    {*D_callsign, *D_callsign_id},  // Destination callsign
+    {*S_callsign, *S_callsign_id},  // Source callsign (-11 = balloon, -9 = car)
 #ifdef DIGI_PATH1
     {DIGI_PATH1, DIGI_PATH1_TTL}, // Digi1 (first digi in the chain)
 #endif
