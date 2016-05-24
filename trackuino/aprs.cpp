@@ -40,15 +40,20 @@ float meters_to_feet(float m)
 void aprs_send()
 {
   char temp[12];                   // Temperature (int/ext)
-  char S_callsign[7];
-  char S_callsign_id;
-  char D_callsign[7];
-  char D_callsign_id;
+  
+  char* S_callsign = NULL;
+  S_callsign= new char[7];
+  char* S_callsign_id;
+  char* D_callsign = NULL;
+  D_callsign= new char[7];
+ 
+  
+  char* D_callsign_id;
 
   strncpy(S_callsign, "AK6L", 4);
-  S_callsign_id = 4;
+  S_callsign_id = '4';
   strncpy(D_callsign, "APRS", 4);
-  S_callsign_id = 0;
+  S_callsign_id = '0';
   
   const struct s_address addresses[] = { 
     {D_callsign, D_callsign_id},  // Destination callsign
